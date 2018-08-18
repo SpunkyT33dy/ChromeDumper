@@ -26,6 +26,6 @@ for item in outputlist:
     try:
         logit(item + "\n")
     except:
-        doing = "nothing"      
+        doing = "---nothing------"      
 c.close()
 os.remove(os.path.abspath(os.path.split(sys.argv[0])[0]) + "\\tempdatabase")
