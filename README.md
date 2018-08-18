@@ -10,3 +10,7 @@ win32crypt
 
 Run it.....it will create a file named "passdump.txt" containing all the Passwords stored locally in google Chrome.
 
+
+<b> NOTE: </b>
+
+You can use py2exe or any python to exe converters to remove any dependencies but I will try to publish native version soon.
